@@ -9,8 +9,8 @@ import java.util.Scanner;
 import ro.ase.cts.classes.Angajat;
 import ro.ase.cts.classes.Aplicant;
 
-public class AngajatReader extends AplicantReader{
-	
+public class AngajatReader extends AplicantReader {
+
 	public AngajatReader(String fileName) {
 		super(fileName);
 		// TODO Auto-generated constructor stub
@@ -28,12 +28,11 @@ public class AngajatReader extends AplicantReader{
 			String ocupatie = input2.next();
 			angajat.setSalariu(salariu);
 			angajat.setOcupatie(ocupatie);
-			
+
 			angajati.add(angajat);
-		} 
+		}
 		input2.close();
 		return angajati;
 	}
-
 
 }

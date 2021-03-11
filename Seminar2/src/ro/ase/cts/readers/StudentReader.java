@@ -26,12 +26,11 @@ public class StudentReader extends AplicantReader {
 			super.citesteAplicant(input, student);
 			student.setAn_studii(input.nextInt());
 			student.setFacultate(input.next());
-			
+
 			studenti.add(student);
 		}
 		input.close();
 		return studenti;
 	}
-	
 
 }

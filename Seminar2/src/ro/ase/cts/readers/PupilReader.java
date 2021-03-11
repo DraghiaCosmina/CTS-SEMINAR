@@ -10,13 +10,13 @@ import ro.ase.cts.classes.Aplicant;
 import ro.ase.cts.classes.Elev;
 
 public class PupilReader extends AplicantReader {
-	
+
 	public PupilReader(String fileName) {
 		super(fileName);
 		// TODO Auto-generated constructor stub
 	}
 
-	public  List<Aplicant> citesteAplicanti() throws FileNotFoundException {
+	public List<Aplicant> citesteAplicanti() throws FileNotFoundException {
 		Scanner input2 = new Scanner(new File(super.getFileName()));
 		input2.useDelimiter(",|\n");
 		List<Aplicant> elevi = new ArrayList<>();
@@ -24,15 +24,14 @@ public class PupilReader extends AplicantReader {
 		while (input2.hasNext()) {
 			Elev elev = new Elev();
 			super.citesteAplicant(input2, elev);
-			elev.setClasa(input2.nextInt()) ;
-			elev.setTutore(input2.next()) ;
-			
+			elev.setClasa(input2.nextInt());
+			elev.setTutore(input2.next());
+
 			elevi.add(elev);
 		}
 
 		input2.close();
 		return elevi;
 	}
-
 
 }
