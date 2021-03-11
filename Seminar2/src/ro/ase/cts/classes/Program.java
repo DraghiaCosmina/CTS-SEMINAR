@@ -5,6 +5,7 @@ import java.util.List;
 
 import ro.ase.cts.readers.AngajatReader;
 import ro.ase.cts.readers.AplicantReader;
+import ro.ase.cts.readers.StudentReader;
 
 public class Program {
 	
@@ -15,6 +16,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		List<Aplicant> listaAplicanti;
+		AplicantReader aplicantReader = new StudentReader("studenti.txt");
 		
 		try {
 			listaAplicanti = citesteAplicanti(new AngajatReader("angajati.txt"));
