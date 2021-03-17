@@ -17,20 +17,20 @@ public class PupilReader extends AplicantReader {
 	}
 
 	public List<Aplicant> citesteAplicanti() throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(super.getFileName()));
-		input2.useDelimiter(",|\n");
+		Scanner input = new Scanner(new File(super.getFileName()));
+		input.useDelimiter(",|\n");
 		List<Aplicant> elevi = new ArrayList<>();
 
-		while (input2.hasNext()) {
+		while (input.hasNext()) {
 			Elev elev = new Elev();
-			super.citesteAplicant(input2, elev);
-			elev.setClasa(input2.nextInt());
-			elev.setTutore(input2.next());
+			super.citesteAplicant(input, elev);
+			elev.setClasa(input.nextInt());
+			elev.setTutore(input.next());
 
 			elevi.add(elev);
 		}
 
-		input2.close();
+		input.close();
 		return elevi;
 	}
 

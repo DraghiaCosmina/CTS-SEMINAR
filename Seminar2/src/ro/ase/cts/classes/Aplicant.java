@@ -8,26 +8,14 @@ public abstract class Aplicant {
 	protected int varsta;
 	protected int punctaj;
 	protected int nrProiecte;
-	protected String[] denumiriProiect;
-
-	public String getNume() {
-		return nume;
-	}
+	protected String[] denumiriProiecte;
 
 	public void setNume(String nume) {
 		this.nume = nume;
 	}
 
-	public String getPrenume() {
-		return prenume;
-	}
-
 	public void setPrenume(String prenume) {
 		this.prenume = prenume;
-	}
-
-	public int getVarsta() {
-		return varsta;
 	}
 
 	public void setVarsta(int varsta) {
@@ -41,10 +29,6 @@ public abstract class Aplicant {
 		} else {
 			System.out.println("nu a fost acceptat.");
 		}
-	}
-
-	public int getPunctaj() {
-		return punctaj;
 	}
 
 	public void setPunctaj(int punctaj) {
@@ -63,16 +47,12 @@ public abstract class Aplicant {
 		this.varsta = varsta;
 		this.punctaj = punctaj;
 		this.nrProiecte = nrProiecte;
-		this.denumiriProiect = denumireProiect;
-	}
-
-	public int getNrProiecte() {
-		return nrProiecte;
+		this.denumiriProiecte = denumireProiect;
 	}
 
 	public void setNrProiecte(int nrProiecte, String[] vect) {
 		this.nrProiecte = nrProiecte;
-		this.denumiriProiect = vect;
+		this.denumiriProiecte = vect;
 
 	}
 
@@ -81,10 +61,7 @@ public abstract class Aplicant {
 	@Override
 	public String toString() {
 		return "Aplicant [nume=" + nume + ", prenume=" + prenume + ", varsta=" + varsta + ", punctaj=" + punctaj
-				+ ", nrProiecte=" + nrProiecte + ", denumiriProiect=" + Arrays.toString(denumiriProiect) + "]";
+				+ ", nrProiecte=" + nrProiecte + ", denumiriProiect=" + Arrays.toString(denumiriProiecte) + "]";
 	}
-	
-	
-	
 
 }
