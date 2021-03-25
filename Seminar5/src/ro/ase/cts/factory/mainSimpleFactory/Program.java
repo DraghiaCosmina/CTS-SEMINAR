@@ -1,0 +1,27 @@
+package ro.ase.cts.factory.mainSimpleFactory;
+
+import ro.ase.cts.factory.Categorie;
+import ro.ase.cts.factory.CategorieFactory;
+import ro.ase.cts.factory.CategoriiMedicamente;
+
+public class Program {
+	public static CategoriiMedicamente getTipCategorie() {
+		return CategoriiMedicamente.raceala;
+	}
+	
+	public static void main(String[] args)  {
+		try {
+		CategorieFactory factory = new CategorieFactory();
+		Categorie durere = factory.creareCategorie(CategoriiMedicamente.durere, 5);
+		Categorie body = factory.creareCategorie(CategoriiMedicamente.body, 10);
+		Categorie categorie=factory.creareCategorie(getTipCategorie(), 15);
+		
+		System.out.println(durere.toString());
+		System.out.println(body.toString());
+		System.out.println(categorie.toString());
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+		}
+
+}
