@@ -1,4 +1,4 @@
-package ro.ase.cts.classes;
+package ro.ase.cts.factory;
 
 public class Durere extends Categorie{
 
