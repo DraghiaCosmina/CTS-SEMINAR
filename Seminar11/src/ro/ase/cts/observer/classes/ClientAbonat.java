@@ -1,0 +1,18 @@
+package ro.ase.cts.observer.classes;
+
+public class ClientAbonat implements Observer{
+	private String nume;
+	
+
+	public ClientAbonat(String nume) {
+		super();
+		this.nume = nume;
+	}
+
+
+	@Override
+	public void receptionareMesaj(String mesaj) {
+		System.out.println("Clientul "+ nume+" a primit mesajul");
+	}
+
+}
