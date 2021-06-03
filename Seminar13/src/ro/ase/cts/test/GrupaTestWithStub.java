@@ -5,12 +5,14 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import ro.ase.cts.categorii.GetPromovabilitateTests;
 import ro.ase.cts.classes.Grupa;
 import ro.ase.cts.classes.IStudent;
 import ro.ase.cts.test.claseDubluri.StudentStub;
 
-public class PromovabilitateaGrupaStubTest {
+public class GrupaTestWithStub {
 	private IStudent studentStub;
 	@Before
 	public void setUp() throws Exception {
@@ -22,6 +24,7 @@ public class PromovabilitateaGrupaStubTest {
 	}
 
 	@Test
+	@Category(GetPromovabilitateTests.class)
 	public void testGetPromovabilitate() {
 		Grupa grupa = new Grupa(1010);
 		grupa.adaugaStudent(studentStub);

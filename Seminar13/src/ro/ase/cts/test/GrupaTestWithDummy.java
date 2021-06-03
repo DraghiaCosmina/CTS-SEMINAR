@@ -10,7 +10,7 @@ import ro.ase.cts.classes.Grupa;
 import ro.ase.cts.classes.IStudent;
 import ro.ase.cts.test.claseDubluri.StudentDummy;
 
-public class AdaugaStudentGrupaDummyTest {
+public class GrupaTestWithDummy {
 	private IStudent studentDummy;
 
 	@Before
